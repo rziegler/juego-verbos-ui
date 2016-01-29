@@ -1,1 +1,11 @@
-Hello, Play!
+<h1>{{verb.infinitive}}</h1>
+<h2>{{result.tense.name}}, {{result.person.name}}</h2>
+
+<button ng-click="result.show = !result.show">Solve</button>
+
+<!--<p ng-repeat="c in verb.conjugations | filter:{tense:result.tense, person:result.person}:true" ng-show="result.show">{{c}}</p>-->
+
+<h1 ng-repeat="c in verb.conjugations | filter:{tense:result.tense.key, person:result.person.key}:true" ng-show="result.show">{{c.value}}</h1>
+<p></p>
+
+<!--<p ng-repeat="c in verb.conjugations" ng-show="result.show">{{c}}</p>-->

@@ -8,7 +8,7 @@ verbServices.factory('Verbs', ['$resource',
                 params: {
                     verbId: 'nadar'
                 },
-                isArray: true
+                isArray: false
             }
         });
   }]);
