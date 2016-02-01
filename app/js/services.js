@@ -6,7 +6,7 @@ verbServices.factory('Verbs', ['$resource',
             query: {
                 method: 'GET',
                 params: {
-                    verbId: 'nadar'
+                    verbId: 'random'
                 },
                 isArray: false
             }

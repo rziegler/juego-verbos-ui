@@ -17,19 +17,19 @@ angular.module('jv.play', ['ngRoute'])
         allowedTenses: {
             1: {
                 key: "PRESENT",
-                name: "Presente"
+                name: "presente"
             },
             2: {
                 key: "PRESENT_PERFECT",
-                name: "Perfect"
+                name: "perfect"
             },
             3: {
                 key: "PRETERITE",
-                name: "Preterito (Indefinido)"
-            },
-            4: {
-                key: "FUTURE",
-                name: "Futuro"
+                name: "preterito (indefinido)"
+//            },
+//            4: {
+//                key: "FUTURE",
+//                name: "futuro"
             }
         },
         allowedPersons: {
@@ -65,6 +65,13 @@ angular.module('jv.play', ['ngRoute'])
         tense: randomTense($scope.config),
         person: randomPerson($scope.config)
     };
+
+    $scope.nextVerb = function () {
+        $scope.result.show = false;
+        $scope.result.tense = randomTense($scope.config);
+        $scope.result.person = randomPerson($scope.config);
+        $scope.verb = Verbs.query();
+    }
     $scope.verb = Verbs.query();
 }]);
 

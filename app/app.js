@@ -4,8 +4,6 @@
 angular.module('myApp', [
     'ngRoute',
     'verbServices',
-    'myApp.view1',
-    'myApp.view2',
     'jv.play',
     'myApp.version'
 ]).

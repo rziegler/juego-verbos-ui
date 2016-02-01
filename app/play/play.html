@@ -1,7 +1,8 @@
 <h1>{{verb.infinitive}}</h1>
-<h2>{{result.tense.name}}, {{result.person.name}}</h2>
+<h4>{{result.tense.name}}, {{result.person.name}}</h4>
 
-<button ng-click="result.show = !result.show">Solve</button>
+<button ng-click="result.show = !result.show">Resolver</button>
+<button ng-click="nextVerb()">Proximo</button>
 
 <!--<p ng-repeat="c in verb.conjugations | filter:{tense:result.tense, person:result.person}:true" ng-show="result.show">{{c}}</p>-->
 
