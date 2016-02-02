@@ -5,11 +5,12 @@ angular.module('myApp', [
     'ngRoute',
     'verbServices',
     'jv.play',
+    'jv.card',
     'myApp.version'
-]).
+])
 
-config(['$routeProvider', function ($routeProvider) {
+.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({
         redirectTo: '/play'
     });
-}]);
+}])

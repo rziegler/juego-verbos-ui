@@ -26,10 +26,10 @@ angular.module('jv.play', ['ngRoute'])
             3: {
                 key: "PRETERITE",
                 name: "preterito (indefinido)"
-//            },
-//            4: {
-//                key: "FUTURE",
-//                name: "futuro"
+                    //            },
+                    //            4: {
+                    //                key: "FUTURE",
+                    //                name: "futuro"
             }
         },
         allowedPersons: {
@@ -71,7 +71,8 @@ angular.module('jv.play', ['ngRoute'])
         $scope.result.tense = randomTense($scope.config);
         $scope.result.person = randomPerson($scope.config);
         $scope.verb = Verbs.query();
-    }
+    };
+
     $scope.verb = Verbs.query();
 }]);
 
