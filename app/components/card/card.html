@@ -1,10 +1,11 @@
-<div>
-    <h1>{{verb.infinitive}}</h1>
-    <h4>{{result.tense.name}}, {{result.person.name}}</h4>
+<article>
+    <section class="card card-top">
+        <h1>{{verb.infinitive}}</h1>
+        <h4>{{result.tense.name}}<br/>{{result.person.name}}</h4>
+    </section>
+    <section class="card card-bottom" ng-click="result.show = !result.show">
+        <h1 ng-repeat="c in verb.conjugations | filter:{tense:result.tense.key, person:result.person.key}:true" ng-show="result.show">{{c.value}}</h1>
 
-    <button ng-click="result.show = !result.show">Resolver</button>
-    <button ng-click="next()">Proximo</button>
-
-    <h1 ng-repeat="c in verb.conjugations | filter:{tense:result.tense.key, person:result.person.key}:true" ng-show="result.show">{{c.value}}</h1>
-    <p></p>
-</div>
+        <button ng-click="next()" ng-show="result.show">Proximo</button>
+    </section>
+</article>

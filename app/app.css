@@ -28,6 +28,27 @@
     content: "";
     padding: 0;
 }
+
 footer {
     font-size: small;
+    padding-top: 3em;
+}
+
+.card {
+    background: #78ada9;
+    padding: 30px;
+    width: 500px;
+    min-height: 200px;
+    text-align: center
+}
+
+.card-top {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.card-bottom {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: #ad9d78
 }
