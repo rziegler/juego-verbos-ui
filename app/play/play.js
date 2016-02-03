@@ -35,27 +35,33 @@ angular.module('jv.play', ['ngRoute'])
         allowedPersons: {
             1: {
                 key: "FIRST_SINGULAR",
-                name: "1st singular"
+                name: "1st singular",
+                hint: "yo"
             },
             2: {
                 key: "SECOND_SINGULAR",
-                name: "2nd singular"
+                name: "2nd singular",
+                hint: "tú"
             },
             3: {
                 key: "THIRD_SINGULAR",
-                name: "3rd singular"
+                name: "3rd singular",
+                hint: "él/ella"
             },
             4: {
                 key: "FIRST_PLURAL",
-                name: "1st plural"
+                name: "1st plural",
+                hint: "nosotros"
             },
             5: {
                 key: "SECOND_PLURAL",
-                name: "2nd plural"
+                name: "2nd plural",
+                hint: "vosotros"
             },
             6: {
                 key: "THIRD_PLURAL",
-                name: "3rd plural"
+                name: "3rd plural",
+                hint: "ellos/ellas"
             }
         }
     };
@@ -71,6 +77,12 @@ angular.module('jv.play', ['ngRoute'])
         $scope.result.tense = randomTense($scope.config);
         $scope.result.person = randomPerson($scope.config);
         $scope.verb = Verbs.query();
+    };
+
+    $scope.replayVerb = function () {
+        $scope.result.show = false;
+        $scope.result.tense = randomTense($scope.config);
+        $scope.result.person = randomPerson($scope.config);
     };
 
     $scope.verb = Verbs.query();

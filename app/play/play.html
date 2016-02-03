@@ -1,2 +1,7 @@
-<card verb="verb" result="result" next="nextVerb()" />
-<!--<p ng-repeat="c in verb.conjugations" ng-show="result.show">{{c}}</p>-->
+<div>
+    <card verb="verb" result="result" />
+</div>
+<section class="play-navigation">
+    <button ng-click="replayVerb()">Cortar otra vez</button>
+    <button ng-click="nextVerb()">Proximo verbo</button>
+</section>

@@ -52,3 +52,20 @@ footer {
     border-bottom-right-radius: 25px;
     background: #ad9d78
 }
+
+
+/*
+.ng-hide:not(.ng-hide-animate) {
+    display: inherit !important;
+    visibility: hidden;
+}*/
+
+.play-navigation {
+    text-align: center;
+    padding: 3em 1em;
+}
+
+.verb-hint {
+    font-size: smaller;
+    color: #8b7e61;
+}

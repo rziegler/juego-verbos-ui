@@ -8,8 +8,7 @@ angular.module('jv.card', ['ngRoute'])
         replace: 'true',
         scope: {
             verb: '=',
-            result: '=',
-            'next': '&'
+            result: '='
         },
         templateUrl: 'components/card/card.html'
     };
