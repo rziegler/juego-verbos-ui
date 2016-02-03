@@ -68,6 +68,7 @@ angular.module('jv.play', ['ngRoute'])
 
     $scope.result = {
         show: false,
+        translation: false,
         tense: randomTense($scope.config),
         person: randomPerson($scope.config)
     };

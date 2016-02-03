@@ -48,12 +48,23 @@ footer {
     background: #78ada9;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    min-height: 200px;
 }
 
 .card-bottom {
     background: #ad9d78;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    min-height: 200px;
+}
+
+.card-all {
+    background: #78ada9;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    min-height: 400px;
 }
 
 
