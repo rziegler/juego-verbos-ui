@@ -35,22 +35,25 @@ footer {
 }
 
 .card {
-    background: #78ada9;
+    text-align: center;
     padding: 30px;
-    width: 500px;
-    min-height: 200px;
-    text-align: center
+    /*    max-width: 600px;*/
+    /*    min-height: 200px;*/
+    /*    left: 50%;*/
+    /*    margin-left: -400px;*/
+    /* Half of the width */
 }
 
 .card-top {
+    background: #78ada9;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
 
 .card-bottom {
+    background: #ad9d78;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    background: #ad9d78
 }
 
 
