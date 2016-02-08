@@ -61,7 +61,7 @@
     
     nav ul li a {
         display: block;
-        padding: 2rem 1rem;
+        padding: 2rem 3rem;
         color: #000;
         text-decoration: none;
     }
@@ -75,7 +75,7 @@
         padding: 0;
         position: absolute;
         top: 100%;
-        left: -180%;
+        left: -100%;
     }
     
     nav ul ul li {
