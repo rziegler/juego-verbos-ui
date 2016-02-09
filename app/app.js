@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
     'ngRoute',
+    'environment',
     'verbServices',
     'jv.play',
     'jv.home',
@@ -15,3 +16,27 @@ angular.module('myApp', [
         redirectTo: '/home'
     });
 }])
+
+.config(function (envServiceProvider) {
+
+    // set the domains and variables for each environment 
+    envServiceProvider.config({
+        domains: {
+            development: ['localhost', 'dev.local'],
+            production: ['ruth.threeit.ch']
+        },
+        vars: {
+            development: {
+                apiUrl: 'http://localhost:8080',
+                //                    staticUrl: '//localhost/static'
+            },
+            production: {
+                apiUrl: 'http://ruth.threeit.ch',
+                //                    staticUrl: '//static.acme.com'
+            }
+        }
+    });
+
+    envServiceProvider.check();
+
+})

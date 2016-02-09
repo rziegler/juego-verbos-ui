@@ -1,8 +1,10 @@
 var verbServices = angular.module('verbServices', ['ngResource']);
 
-verbServices.factory('Verbs', ['$resource',
-  function ($resource) {
-        return $resource('http://localhost:8080/verbs/:verbId', {}, {
+verbServices.factory('Verbs', ['$resource', 'envService',
+  function ($resource, envService) {
+        var apiUrl = envService.read('apiUrl');
+        console.log("Using " + apiUrl);
+        return $resource(apiUrl + '/verbs/:verbId', {}, {
             query: {
                 method: 'GET',
                 params: {
