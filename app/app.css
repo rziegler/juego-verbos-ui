@@ -1,157 +1,234 @@
-    /* app css stylesheet */
-    /* Main navigation (from http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu)
+/* Basic styles of container
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    
-    nav {
-        text-align: center;
-        float: right;
-        padding-bottom: 3rem;
-    }
-    
-    .container {
-        /* clear the content after the right-floating navigation */
-        clear: both;
-    }
-    
-    nav ul ul {
-        /* change from 'none' to 'block' to debug all elements of the navigation! */
-        display: none;
-    }
-    
-    nav ul li:hover > ul {
-        display: block;
-        z-index: 10;
-    }
-    
-    nav ul {
-        box-shadow: 0rem 0rem 0.9rem rgba(0, 0, 0, 0.15);
-        margin: 0 !important;
-        list-style: none;
-        position: relative;
-        display: inline-table;
-    }
-    
-    nav > ul {
-        border-bottom-left-radius: 0.9rem;
-    }
-    
-    nav > ul > li {
-        /* only the direct descendants of nav */
-        padding-bottom: 2rem;
-    }
-    
-    nav ul:after {
-        content: "";
-        clear: both;
-        display: block;
-        margin: 0;
-    }
-    
-    nav ul li {
-        float: left;
-        margin-bottom: 0;
-        background: #fff;
-    }
-    
-    nav ul li:hover {}
-    
-    nav ul li:hover a {
-        color: #000;
-    }
-    
-    nav ul li a {
-        display: block;
-        padding: 2rem 3rem;
-        color: #000;
-        text-decoration: none;
-    }
-    
-    nav > ul > li > a {
-        /* only top-level */
-        padding: 2rem;
-    }
-    
-    nav ul ul {
-        padding: 0;
-        position: absolute;
-        top: 100%;
-        left: -100%;
-    }
-    
-    nav ul ul li {
-        float: none;
-        border-bottom: 1px solid #575f6a;
-        position: relative;
-    }
-    
-    nav ul ul li:last-of-type {
-        border-bottom: 0px;
-    }
-    
-    nav ul ul li a {}
-    
-    nav ul ul li a:hover {
-        background: #000;
-        color: #fff;
-    }
-    
-    nav ul ul ul {
-        position: absolute;
-        right: 100%;
-        left: -100%;
-        top: 0;
-    }
-    /* Navigation of the play mode
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 10rem 0 4rem;
+}
+
+header {
+    position: absolute;
+    background: #fff;
+    left: 0;
+    top: 0;
+    height: 10rem;
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    height: 4rem;
+    width: 100%;
+    font-size: smaller;
+    padding: 1em 5em 0em;
+}
+
+
+/*
+footer {
+    font-size: small;
+            padding-top: 3em;
+}
+*/
+
+
+/* Main navigation (from http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    
-    footer {
-        font-size: small;
-        padding-top: 3em;
-    }
-    
-    .play-navigation {
-        text-align: center;
-        padding: 3em 1em;
-    }
-    /* Card
+
+nav {
+    text-align: center;
+    float: right;
+    padding-bottom: 3rem;
+}
+
+.container {
+    /* clear the content after the right-floating navigation */
+    clear: both;
+    padding-top: 3em;
+}
+
+nav ul ul {
+    /* change from 'none' to 'block' to debug all elements of the navigation! */
+    display: none;
+}
+
+nav ul li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+
+nav ul {
+    box-shadow: 0rem 0rem 0.9rem rgba(0, 0, 0, 0.15);
+    margin: 0 !important;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+
+nav > ul {
+    border-bottom-left-radius: 0.9rem;
+}
+
+nav > ul > li {
+    /* only the direct descendants of nav */
+    padding-bottom: 2rem;
+}
+
+nav ul:after {
+    content: "";
+    clear: both;
+    display: block;
+    margin: 0;
+}
+
+nav ul li {
+    float: left;
+    margin-bottom: 0;
+    background: #fff;
+}
+
+nav ul li:hover {}
+
+nav ul li:hover a {
+    color: #000;
+}
+
+nav ul li a {
+    display: block;
+    padding: 2rem 3rem;
+    color: #000;
+    text-decoration: none;
+}
+
+nav > ul > li > a {
+    /* only top-level */
+    padding: 2rem;
+}
+
+nav ul ul {
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+}
+
+nav ul ul li {
+    float: none;
+    border-bottom: 1px solid #575f6a;
+    position: relative;
+}
+
+nav ul ul li:last-of-type {
+    border-bottom: 0px;
+}
+
+nav ul ul li a {}
+
+nav ul ul li a:hover {
+    background: #000;
+    color: #fff;
+}
+
+nav ul ul ul {
+    position: absolute;
+    right: 100%;
+    left: -100%;
+    top: 0;
+}
+
+
+/* Navigation of the play mode
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    
-    .card {
-        text-align: center;
-        padding: 30px;
-        /*    max-width: 600px;*/
-        /*    min-height: 200px;*/
-        /*    left: 50%;*/
-        /*    margin-left: -400px;*/
-        /* Half of the width */
-    }
-    
-    .card-top {
-        background: #78ada9;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        min-height: 200px;
-    }
-    
-    .card-bottom {
-        background: #ad9d78;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        min-height: 200px;
-    }
-    
-    .card-all {
-        background: #78ada9;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        min-height: 400px;
-    }
-    
-    .card-verb-hint {
-        font-size: smaller;
-        color: #8b7e61;
-    }
-    /* Utilities
+
+.play-navigation {
+    text-align: center;
+    padding: 3em 1em;
+}
+
+
+/* Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.card {
+    text-align: center;
+    padding: 30px;
+    /*    max-width: 600px;*/
+    /*    min-height: 200px;*/
+    /*    left: 50%;*/
+    /*    margin-left: -400px;*/
+    /* Half of the width */
+}
+
+.card-top {
+    background: #78ada9;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    min-height: 200px;
+}
+
+.card-bottom {
+    background: #ad9d78;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    min-height: 20rem;
+}
+
+.card-all {
+    background: #78ada9;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    min-height: 400rem;
+}
+
+.card-verb-hint {
+    font-size: smaller;
+    color: #8b7e61;
+}
+
+
+/* Home
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.home-h1 {
+    font-family: "Amatic SC";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6em;
+    line-height: 1.6em;
+    margin-bottom: 8rem;
+    /*    text-align: center;*/
+}
+
+.home-inverse {
+    background-color: #000;
+    color: #fff;
+}
+
+.home-highlight {
+    -moz-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    width: 20rem;
+    padding: 0 1rem;
+    position: relative;
+    /*    left: 20%;*/
+    float: left;
+    z-index: 10;
+    margin-top: 2.6rem;
+    margin-right: 2.5rem;
+}
+
+
+/* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
