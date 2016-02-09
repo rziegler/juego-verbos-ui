@@ -30,13 +30,9 @@ footer {
     padding: 1em 5em 0em;
 }
 
-
-/*
-footer {
-    font-size: small;
-            padding-top: 3em;
+[ng-click] {
+    cursor: pointer;
 }
-*/
 
 
 /* Main navigation (from http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu)
@@ -178,6 +174,7 @@ nav ul ul ul {
     border-bottom-left-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
     min-height: 20rem;
+    cursor: pointer;
 }
 
 .card-all {
@@ -186,7 +183,7 @@ nav ul ul ul {
     border-top-right-radius: 2.5rem;
     border-bottom-left-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
-    min-height: 400rem;
+    min-height: 40rem;
 }
 
 .card-verb-hint {
