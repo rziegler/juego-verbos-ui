@@ -12,5 +12,5 @@ angular.module('jv.home', ['ngRoute'])
     }])
 
 .controller('HomeCtrl', ['$scope', function ($scope) {
-    console.log("Home controller I am");
+    // nothing to do here yet...
 }]);

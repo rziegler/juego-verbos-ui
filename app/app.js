@@ -7,6 +7,7 @@ angular.module('myApp', [
     'verbServices',
     'jv.play',
     'jv.home',
+    'jv.config',
     'jv.card',
     'myApp.version'
 ])
