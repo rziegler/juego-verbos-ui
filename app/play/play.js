@@ -11,7 +11,7 @@ angular.module('jv.play', ['ngRoute'])
     });
     }])
 
-.controller('PlayCtrl', ['$scope', 'Verbs', function ($scope, Verbs) {
+.controller('PlayCtrl', ['$scope', 'Verbs', function ($scope, verbService) {
 
     $scope.config = {
         allowedTenses: {
@@ -86,7 +86,7 @@ angular.module('jv.play', ['ngRoute'])
         $scope.result.person = randomPerson($scope.config);
     };
 
-    $scope.verb = Verbs.query();
+    $scope.verb = verbService.query();
 }]);
 
 function randomTense(config) {

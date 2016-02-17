@@ -5,6 +5,7 @@ angular.module('myApp', [
     'ngRoute',
     'environment',
     'verbServices',
+    'configService',
     'jv.play',
     'jv.home',
     'jv.config',
