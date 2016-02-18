@@ -14,10 +14,5 @@ angular.module('jv.config', ['ngRoute'])
 .controller('ConfigCtrl', ['$scope', 'Config', function ($scope, configService) {
     var ctrl = this;
     $scope.allTenses = configService.getAllTenses();
-
-    $scope.changeActiveTense = function (tense) {
-        configService.setActive(tense);
-    };
-
-    var tenses = configService.getActiveTenses();
+    $scope.allPersons = configService.getAllPersons();
 }]);

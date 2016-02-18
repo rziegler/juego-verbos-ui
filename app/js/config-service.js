@@ -26,6 +26,46 @@ configService.factory('Config', ['$resource',
             }
         ];
 
+        var persons = [
+            {
+                key: "FIRST_SINGULAR",
+                name: "1st singular",
+                hint: "yo",
+                active: true
+            },
+            {
+                key: "FIRST_PLURAL",
+                name: "1st plural",
+                hint: "nosotros",
+                active: true
+            },
+            {
+                key: "SECOND_SINGULAR",
+                name: "2nd singular",
+                hint: "tú",
+                active: true
+            },
+            {
+                key: "SECOND_PLURAL",
+                name: "2nd plural",
+                hint: "vosotros",
+                active: true
+            },
+            {
+                key: "THIRD_SINGULAR",
+                name: "3rd singular",
+                hint: "él/ella",
+                active: true
+            },
+            {
+                key: "THIRD_PLURAL",
+                name: "3rd plural",
+                hint: "ellos/ellas",
+                active: true
+            }
+      ];
+
+
         var getAllTenses = function () {
             return tenses;
         };
@@ -47,11 +87,37 @@ configService.factory('Config', ['$resource',
                     console.log('Change active flag for ' + element.name + '(' + element.active + ')');
                 }
             });
+        };
+
+        var getAllPersons = function () {
+            return persons;
+        };
+
+        var getActivePersons = function () {
+            var result = [];
+            persons.forEach(function (entry) {
+                if (entry.active) {
+                    result.push(entry);
+                }
+            });
+            return result;
+        };
+
+        var changePersonActive = function (id) {
+            persons.forEach(function (element) {
+                if (element.name === id) {
+                    element.active = !element.active;
+                    console.log('Change active flag for ' + element.name + '(' + element.active + ')');
+                }
+            });
         }
 
         return {
             getActiveTenses: getActiveTenses,
             getAllTenses: getAllTenses,
-            changeTenseActive: changeTenseActive
+            changeTenseActive: changeTenseActive,
+            getAllPersons: getAllPersons,
+            getActivePersons: getActivePersons,
+            changePersonActive: changePersonActive
         }
 }]);

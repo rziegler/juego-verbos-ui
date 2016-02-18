@@ -11,60 +11,13 @@ angular.module('jv.play', ['ngRoute'])
     });
     }])
 
-.controller('PlayCtrl', ['$scope', 'Verbs', function ($scope, verbService) {
+.controller('PlayCtrl', ['$scope', 'Verbs', 'Config', function ($scope, verbService, configService) {
 
-    $scope.config = {
-        allowedTenses: {
-            1: {
-                key: "PRESENT",
-                name: "presente"
-            },
-            2: {
-                key: "PRESENT_PERFECT",
-                name: "perfect"
-            },
-            3: {
-                key: "PRETERITE",
-                name: "preterito (indefinido)"
-                    //            },
-                    //            4: {
-                    //                key: "FUTURE",
-                    //                name: "futuro"
-            }
-        },
-        allowedPersons: {
-            1: {
-                key: "FIRST_SINGULAR",
-                name: "1st singular",
-                hint: "yo"
-            },
-            2: {
-                key: "SECOND_SINGULAR",
-                name: "2nd singular",
-                hint: "tú"
-            },
-            3: {
-                key: "THIRD_SINGULAR",
-                name: "3rd singular",
-                hint: "él/ella"
-            },
-            4: {
-                key: "FIRST_PLURAL",
-                name: "1st plural",
-                hint: "nosotros"
-            },
-            5: {
-                key: "SECOND_PLURAL",
-                name: "2nd plural",
-                hint: "vosotros"
-            },
-            6: {
-                key: "THIRD_PLURAL",
-                name: "3rd plural",
-                hint: "ellos/ellas"
-            }
-        }
-    };
+    $scope.config = {};
+    $scope.config.allowedTenses = configService.getActiveTenses();
+    $scope.config.allowedPersons = configService.getActivePersons();
+
+    $scope.verb = verbService.query();
 
     $scope.result = {
         show: false,
@@ -74,29 +27,33 @@ angular.module('jv.play', ['ngRoute'])
     };
 
     $scope.nextVerb = function () {
+        $scope.config.allowedTenses = configService.getActiveTenses();
+        $scope.config.allowedPersons = configService.getActivePersons();
         $scope.result.show = false;
         $scope.result.tense = randomTense($scope.config);
         $scope.result.person = randomPerson($scope.config);
-        $scope.verb = Verbs.query();
+        $scope.verb = verbService.query();
     };
 
     $scope.replayVerb = function () {
+        $scope.config.allowedTenses = configService.getActiveTenses();
+        $scope.config.allowedPersons = configService.getActivePersons();
         $scope.result.show = false;
         $scope.result.tense = randomTense($scope.config);
         $scope.result.person = randomPerson($scope.config);
     };
 
-    $scope.verb = verbService.query();
+
 }]);
 
 function randomTense(config) {
     var id = Math.floor((Math.random() * Object.keys(config.allowedTenses).length) + 1);
-    var tense = config.allowedTenses[id];
+    var tense = config.allowedTenses[id - 1];
     return tense;
 }
 
 function randomPerson(config) {
     var id = Math.floor((Math.random() * Object.keys(config.allowedPersons).length) + 1);
-    var person = config.allowedPersons[id];
+    var person = config.allowedPersons[id - 1];
     return person;
 }

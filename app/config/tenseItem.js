@@ -7,7 +7,7 @@ function TenseItemCtrl($scope, $element, $attrs) {
     var ctrl = this;
 
     ctrl.update = function (value, active) {
-        console.log('Update on tense item: ' + value);
+        console.log('Update on item: ' + value);
         ctrl.onUpdate({
             id: value
         });
