@@ -1,7 +1,7 @@
 <section>
     <h1 class="h1">Konfiguration</h1>
 
-    <p>Hier kannst du deine Einstellungen f&uuml;r das Spiel vornehmen. Solange du nicht eingeloggt bist, werden die Einstellungen nicht gespeichert. Um dich einzuloggen, klicke den Button "Login".</p>
+    <p>Hier kannst du deine Einstellungen f&uuml;r das Spiel vornehmen. Die Einstellungen werden momentan noch nicht gespeichert. &Auml;xg&uuml;si!</p>
 
     <!--
     <section class="play-navigation">
@@ -9,37 +9,6 @@
 </section>
 -->
     <form>
-
-        <!--
-        <div id="tenses" class="row">
-    <div class="six columns">
-        <label>
-            <input type="checkbox" checked>
-            <span class="label-body">Present</span>
-        </label>
-        <label>
-            <input type="checkbox" checked>
-            <span class="label-body">Present Perfect</span>
-        </label>
-        <label>
-            <input type="checkbox" checked>
-            <span class="label-body">Preterito Indefinido</span>
-        </label>
-    </div>
-    <div class="six columns">
-        <label>
-            <input type="checkbox">
-            <span class="label-body">Futuro</span>
-        </label>
-        <label>
-            <input type="checkbox" checked>
-            <span class="label-body">Gerundino</span>
-        </label>
-    </div>
-</div>
-<p></p>
-<label for="tenses">Huhuu</label>
--->
         <tense-list title="'Tenses'" values="allTenses"></tense-list>
         <person-list title="'Persons'" values="allPersons"></person-list>
 
@@ -55,10 +24,10 @@
             </div>
             <div class="six columns">
                 <label for="uiLanguage">UI Language</label>
-                <select class="u-full-width" id="uiLanguage">
-                    <option value="Option 1">Deutsch</option>
-                    <option value="Option 2">English</option>
-                    <option value="Option 3" disabled>Español</option>
+                <select class="u-full-width" id="uiLanguage" ng-model="language" ng-change="changeLanguage()">
+                    <option value="de">Deutsch</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
                 </select>
             </div>
         </div>

@@ -1,7 +1,7 @@
 var configService = angular.module('configService', ['ngResource']);
 
-configService.factory('Config', ['$resource',
-  function ($resource) {
+configService.factory('Config', ['$resource', '$translate',
+  function ($resource, $translate) {
         var tenses = [
             {
                 key: "PRESENT",
@@ -25,7 +25,6 @@ configService.factory('Config', ['$resource',
                 active: false
             }
         ];
-
         var persons = [
             {
                 key: "FIRST_SINGULAR",
@@ -64,7 +63,6 @@ configService.factory('Config', ['$resource',
                 active: true
             }
       ];
-
 
         var getAllTenses = function () {
             return tenses;
@@ -110,6 +108,15 @@ configService.factory('Config', ['$resource',
                     console.log('Change active flag for ' + element.name + '(' + element.active + ')');
                 }
             });
+        };
+
+        var getLanguage = function () {
+            return $translate.use();
+        }
+
+        var setLanguage = function (lang) {
+            console.log('Changing lang to ' + lang);
+            $translate.use(lang);
         }
 
         return {
@@ -118,6 +125,8 @@ configService.factory('Config', ['$resource',
             changeTenseActive: changeTenseActive,
             getAllPersons: getAllPersons,
             getActivePersons: getActivePersons,
-            changePersonActive: changePersonActive
+            changePersonActive: changePersonActive,
+            getLanguage: getLanguage,
+            setLanguage: setLanguage
         }
 }]);

@@ -4,7 +4,7 @@ angular.module('jv.card', ['ngRoute'])
 
 .directive('card', function () {
     return {
-        restrict: 'AE',
+        restrict: 'E',
         replace: 'true',
         scope: {
             verb: '=',

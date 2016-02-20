@@ -4,6 +4,7 @@
 angular.module('myApp', [
     'ngRoute',
     'environment',
+    'pascalprecht.translate',
     'verbServices',
     'configService',
     'jv.play',
@@ -20,7 +21,6 @@ angular.module('myApp', [
 }])
 
 .config(function (envServiceProvider) {
-
     // set the domains and variables for each environment 
     envServiceProvider.config({
         domains: {
@@ -30,15 +30,41 @@ angular.module('myApp', [
         vars: {
             development: {
                 apiUrl: 'http://localhost:8080',
-                //                    staticUrl: '//localhost/static'
             },
             production: {
                 apiUrl: 'http://ruth.threeit.ch',
-                //                    staticUrl: '//static.acme.com'
             }
         }
     });
-
     envServiceProvider.check();
-
 })
+
+.config(['$translateProvider', function ($translateProvider) {
+    $translateProvider
+        .translations('en', {
+            PLAY: {
+                NEXT: 'Next verb',
+                REPLAY: 'Replay',
+                HINT: 'Click to show solution'
+            }
+        })
+        .translations('de', {
+            PLAY: {
+                NEXT: 'Nächstes Verb',
+                REPLAY: 'Dasselbe nochmals',
+                HINT: 'Klicken um die Lösung anzuzeigen'
+            }
+        })
+        .translations('es', {
+            PLAY: {
+                NEXT: 'Proximo verbo',
+                REPLAY: 'Cortar otra vez',
+                HINT: 'Clicar para presentar la solución'
+            }
+        });
+
+    $translateProvider
+        .preferredLanguage('en')
+        .useSanitizeValueStrategy('escape')
+        .fallbackLanguage('en');
+}])

@@ -11,8 +11,14 @@ angular.module('jv.config', ['ngRoute'])
     });
     }])
 
-.controller('ConfigCtrl', ['$scope', 'Config', function ($scope, configService) {
+.controller('ConfigCtrl', ['$scope', '$translate', 'Config', function ($scope, $translate, configService) {
     var ctrl = this;
     $scope.allTenses = configService.getAllTenses();
     $scope.allPersons = configService.getAllPersons();
+
+    $scope.language = $translate.use();
+
+    $scope.changeLanguage = function () {
+        configService.setLanguage($scope.language);
+    }
 }]);
