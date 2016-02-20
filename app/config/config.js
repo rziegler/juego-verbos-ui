@@ -16,7 +16,7 @@ angular.module('jv.config', ['ngRoute'])
     $scope.allTenses = configService.getAllTenses();
     $scope.allPersons = configService.getAllPersons();
 
-    $scope.language = $translate.use();
+    $scope.language = configService.getLanguage();
 
     $scope.changeLanguage = function () {
         configService.setLanguage($scope.language);
