@@ -43,7 +43,20 @@ angular.module('jv.play', ['ngRoute'])
         $scope.result.person = randomPerson($scope.config);
     };
 
-
+    $scope.onAction = function () {
+        var action = configService.getAction();
+        switch (action.key) {
+        case 'NONE':
+            $scope.result.show = !$scope.result.show;
+            break;
+        case 'REPLAY':
+            $scope.replayVerb();
+            break;
+        case 'NEXT':
+            $scope.nextVerb();
+            break;
+        };
+    };
 }]);
 
 function randomTense(config) {

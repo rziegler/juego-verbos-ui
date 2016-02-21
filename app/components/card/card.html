@@ -6,7 +6,7 @@
             <h4>{{result.tense.name}}<br/>{{result.person.name}}</h4>
         </section>
 
-        <section class="card card-bottom" ng-click="result.show = !result.show">
+        <section class="card card-bottom" ng-click="evaluateCardAction()">
             <h4>{{result.person.hint}}</h4>
             <p ng-show="!result.show" class="card-verb-hint">{{'PLAY.HINT' | translate}}</p>
             <h1 ng-repeat="c in verb.conjugations | filter:{tense:result.tense.key, person:result.person.key}:true" ng-show="result.show">{{c.value}}</h1>

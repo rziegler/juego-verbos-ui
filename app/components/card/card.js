@@ -8,8 +8,22 @@ angular.module('jv.card', ['ngRoute'])
         replace: 'true',
         scope: {
             verb: '=',
-            result: '='
+            result: '=',
+            onAction: '&'
         },
-        templateUrl: 'components/card/card.html'
+        templateUrl: 'components/card/card.html',
+        controller: 'CardCtrl'
     };
 })
+
+.controller('CardCtrl', ['$scope', 'Config', function ($scope, configService) {
+
+    $scope.evaluateCardAction = function () {
+        if (!$scope.result.show) {
+            $scope.result.show = !$scope.result.show;
+        } else {
+            // call parent controller
+            $scope.onAction();
+        }
+    }
+}]);
