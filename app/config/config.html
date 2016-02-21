@@ -16,18 +16,14 @@
         <div class="row">
             <div class="six columns">
                 <label for="cardAction">Card Click Action</label>
-                <select class="u-full-width" id="uiLanguage">
-                    <option value="Option 1">None (flip card)</option>
-                    <option value="Option 2">Redraw</option>
-                    <option value="Option 3">Next verb</option>
+                <select class="u-full-width" id="cardAction" ng-model="actionData.selected" ng-change="changeAction()">
+                    <option ng-repeat="option in actionData.options" value="{{option.key}}">{{option.value.text}}</option>
                 </select>
             </div>
             <div class="six columns">
                 <label for="uiLanguage">UI Language</label>
-                <select class="u-full-width" id="uiLanguage" ng-model="language" ng-change="changeLanguage()">
-                    <option value="de">Deutsch</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
+                <select class="u-full-width" id="uiLanguage" ng-model="languageData.selected" ng-change="changeLanguage()">
+                    <option ng-repeat="option in languageData.options" value="{{option.key}}">{{option.value.text}}</option>
                 </select>
             </div>
         </div>

@@ -1,3 +1,5 @@
+'use strict';
+
 var configService = angular.module('configService', ['ngResource']);
 
 configService.factory('Config', ['$resource', '$translate',
@@ -63,6 +65,30 @@ configService.factory('Config', ['$resource', '$translate',
                 active: true
             }
       ];
+        var actions = new Enum({
+            'NONE': {
+                text: 'None (flip card)'
+            },
+            'REPLAY': {
+                text: 'Replay same verb'
+            },
+            'NEXT': {
+                text: 'Next verb'
+            }
+        });
+        var currentAction = actions.NONE;
+
+        var languages = new Enum({
+            'EN': {
+                text: 'English'
+            },
+            'DE': {
+                text: 'Deutsch'
+            },
+            'ES': {
+                text: 'Español'
+            }
+        });
 
         var getAllTenses = function () {
             return tenses;
@@ -110,13 +136,29 @@ configService.factory('Config', ['$resource', '$translate',
             });
         };
 
+        var getAllLanguages = function () {
+            return languages;
+        }
+
         var getLanguage = function () {
             return $translate.use();
-        }
+        };
 
         var setLanguage = function (lang) {
             console.log('Changing lang to ' + lang);
             $translate.use(lang);
+        };
+
+        var getAllActions = function () {
+            return actions;
+        };
+
+        var getAction = function () {
+            return currentAction;
+        };
+
+        var setAction = function (a) {
+            currentAction = actions.get(a);
         }
 
         return {
@@ -126,7 +168,11 @@ configService.factory('Config', ['$resource', '$translate',
             getAllPersons: getAllPersons,
             getActivePersons: getActivePersons,
             changePersonActive: changePersonActive,
+            getAllLanguages: getAllLanguages,
             getLanguage: getLanguage,
-            setLanguage: setLanguage
+            setLanguage: setLanguage,
+            getAllActions: getAllActions,
+            getAction: getAction,
+            setAction: setAction
         }
 }]);
