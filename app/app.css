@@ -57,7 +57,7 @@ nav ul ul {
 
 nav ul li:hover > ul {
     display: block;
-    z-index: 10;
+    z-index: 20;
 }
 
 nav ul {
