@@ -141,12 +141,13 @@ configService.factory('Config', ['$resource', '$translate',
         }
 
         var getLanguage = function () {
-            return $translate.use();
+            return $translate.use().toUpperCase;
         };
 
         var setLanguage = function (lang) {
-            console.log('Changing lang to ' + lang);
-            $translate.use(lang);
+            var lowerLang = lang.toLowerCase();
+            console.log('Changing lang to ' + lowerLang);
+            $translate.use(lowerLang);
         };
 
         var getAllActions = function () {
