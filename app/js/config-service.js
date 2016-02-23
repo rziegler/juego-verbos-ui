@@ -2,31 +2,18 @@
 
 var configService = angular.module('configService', ['ngResource']);
 
-configService.factory('Config', ['$resource', '$translate',
-  function ($resource, $translate) {
-        var tenses = [
-            {
-                key: "PRESENT",
-                name: "presente",
-                active: true
-            }, {
-                key: "PRESENT_PERFECT",
-                name: "perfect",
-                active: true
-            }, {
-                key: "PRETERITE",
-                name: "preterito (indefinido)",
-                active: true
-            }, {
-                key: "FUTURO",
-                name: "futuro",
-                active: false
-            }, {
-                key: "GERUNDIO",
-                name: "gerundio",
-                active: false
+configService.factory('Config', ['$resource', '$translate', 'envService',
+  function ($resource, $translate, envService) {
+        var apiUrl = envService.read('apiUrl');
+        var Tenses = $resource(apiUrl + '/api/tenses', {}, {
+            query: {
+                method: 'GET',
+                isArray: true
             }
-        ];
+        });
+
+        var tenses = Tenses.query();
+
         var persons = [
             {
                 key: "FIRST_SINGULAR",
@@ -91,6 +78,7 @@ configService.factory('Config', ['$resource', '$translate',
         });
 
         var getAllTenses = function () {
+            console.log(tenses);
             return tenses;
         };
 
