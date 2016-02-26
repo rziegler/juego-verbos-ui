@@ -13,6 +13,12 @@ configService.factory('Config', ['$resource', '$translate', 'envService',
         });
 
         var tenses = Tenses.query();
+        tenses.$promise.then(function (response) {
+            console.log('tenses loaded');
+            tenses = response;
+        }).catch(function () {
+            console.log('error fetching tenses');
+        })
 
         var persons = [
             {
@@ -78,12 +84,12 @@ configService.factory('Config', ['$resource', '$translate', 'envService',
         });
 
         var getAllTenses = function () {
-            console.log(tenses);
             return tenses;
         };
 
         var getActiveTenses = function () {
             var result = [];
+
             tenses.forEach(function (entry) {
                 if (entry.active) {
                     result.push(entry);
@@ -129,7 +135,7 @@ configService.factory('Config', ['$resource', '$translate', 'envService',
         }
 
         var getLanguage = function () {
-            return $translate.use().toUpperCase;
+            return $translate.use().toUpperCase();
         };
 
         var setLanguage = function (lang) {
@@ -143,7 +149,7 @@ configService.factory('Config', ['$resource', '$translate', 'envService',
         };
 
         var getAction = function () {
-            return currentAction;
+            return currentAction.key;
         };
 
         var setAction = function (a) {

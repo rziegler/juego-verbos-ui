@@ -26,4 +26,12 @@ angular.module('jv.card', ['ngRoute'])
             $scope.onAction();
         }
     }
+
+    $scope.filterSolution = function (conjugation) {
+        var result = false;
+        if (conjugation.tense.key == $scope.result.tense.key && conjugation.person == $scope.result.person.key) {
+            result = true;
+        }
+        return result;
+    }
 }]);

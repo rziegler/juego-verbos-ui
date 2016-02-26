@@ -12,6 +12,8 @@ angular.module('jv.config', ['ngRoute'])
     }])
 
 .controller('ConfigCtrl', ['$scope', '$translate', 'Config', function ($scope, $translate, configService) {
+
+    console.log('init controller');
     var ctrl = this;
     $scope.allTenses = configService.getAllTenses();
     $scope.allPersons = configService.getAllPersons();
@@ -40,5 +42,4 @@ angular.module('jv.config', ['ngRoute'])
     $scope.changeAction = function () {
         configService.setAction($scope.actionData.selected);
     }
-
 }]);

@@ -14,17 +14,19 @@ angular.module('jv.play', ['ngRoute'])
 .controller('PlayCtrl', ['$scope', 'Verbs', 'Config', function ($scope, verbService, configService) {
 
     $scope.config = {};
-    $scope.config.allowedTenses = configService.getActiveTenses();
-    $scope.config.allowedPersons = configService.getActivePersons();
 
-    $scope.verb = verbService.query();
+    configService.getAllTenses().$promise.then(function (data) {
+        $scope.config.allowedTenses = configService.getActiveTenses();
+        $scope.config.allowedPersons = configService.getActivePersons();
 
-    $scope.result = {
-        show: false,
-        translation: false,
-        tense: randomTense($scope.config),
-        person: randomPerson($scope.config)
-    };
+        $scope.verb = verbService.query();
+        $scope.result = {
+            show: false,
+            translation: false,
+            tense: randomTense($scope.config),
+            person: randomPerson($scope.config)
+        };
+    })
 
     $scope.nextVerb = function () {
         $scope.config.allowedTenses = configService.getActiveTenses();

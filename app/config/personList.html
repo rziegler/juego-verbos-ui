@@ -1,6 +1,6 @@
 <label for="persons">{{$ctrl.title}}</label>
 <div id="persons" class="row">
     <div ng-repeat="x in $ctrl.values">
-        <tense-item value='x.name' active="x.active" on-update='$ctrl.updatePerson(id)'></tense-item>
+        <person-item value='x.name' hint='x.hint' active="x.active" on-update='$ctrl.updatePerson(id)'></person-item>
     </div>
 </div>
