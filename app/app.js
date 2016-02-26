@@ -47,7 +47,23 @@ angular.module('myApp', [
                 REPLAY: 'Replay',
                 HINT: 'Click to show solution',
             },
-            //            TENSE {
+            PERSON: {
+                FIRST_SINGULAR: '1st singlar',
+                FIRST_PLURAL: '1st plural',
+                SECOND_SINGULAR: '2nd singular',
+                SECOND_PLURAL: '2nd plural',
+                THIRD_SINGULAR: '3rd singular',
+                THIRD_PLURAL: '3rd plural'
+            },
+            PERSON_HINT: {
+                FIRST_SINGULAR: 'i',
+                FIRST_PLURAL: 'we',
+                SECOND_SINGULAR: 'you',
+                SECOND_PLURAL: 'you',
+                THIRD_SINGULAR: 'he/she',
+                THIRD_PLURAL: 'they'
+            },
+            //            TENSE: {
             PRESENT: 'Present',
             PRESENT_PERFECT: 'Present Perfect',
             PRETERITE: 'Preterite',
@@ -67,6 +83,22 @@ angular.module('myApp', [
                 NEXT: 'Nächstes Verb',
                 REPLAY: 'Dasselbe nochmals',
                 HINT: 'Klicken um die Lösung anzuzeigen'
+            },
+            PERSON: {
+                FIRST_SINGULAR: '1. Singular',
+                FIRST_PLURAL: '1. Plural',
+                SECOND_SINGULAR: '2. Singular',
+                SECOND_PLURAL: '2. Plural',
+                THIRD_SINGULAR: '3. Singular',
+                THIRD_PLURAL: '3. Plural'
+            },
+            PERSON_HINT: {
+                FIRST_SINGULAR: 'ich',
+                FIRST_PLURAL: 'wir',
+                SECOND_SINGULAR: 'du',
+                SECOND_PLURAL: 'ihr',
+                THIRD_SINGULAR: 'er/sie',
+                THIRD_PLURAL: 'sie'
             },
             //            TENSE: {
             PRESENT: 'Präsens',
@@ -88,6 +120,22 @@ angular.module('myApp', [
                 NEXT: 'Proximo verbo',
                 REPLAY: 'Cortar otra vez',
                 HINT: 'Clicar para presentar la solución',
+            },
+            PERSON: {
+                FIRST_SINGULAR: '1° singlar',
+                FIRST_PLURAL: '1° plural',
+                SECOND_SINGULAR: '2° singular',
+                SECOND_PLURAL: '2° plural',
+                THIRD_SINGULAR: '3° singular',
+                THIRD_PLURAL: '3° plural'
+            },
+            PERSON_HINT: {
+                FIRST_SINGULAR: 'yo',
+                FIRST_PLURAL: 'nosotros',
+                SECOND_SINGULAR: 'tú',
+                SECOND_PLURAL: 'vosotros',
+                THIRD_SINGULAR: 'él/ella',
+                THIRD_PLURAL: 'ellos/ellas'
             },
             //            TENSE: {
             PRESENT: 'Presente',

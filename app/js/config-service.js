@@ -23,38 +23,38 @@ configService.factory('Config', ['$resource', '$translate', 'envService',
         var persons = [
             {
                 key: "FIRST_SINGULAR",
-                name: "1st singular",
-                hint: "yo",
+                name: "PERSON.FIRST_SINGULAR",
+                hint: "PERSON_HINT.FIRST_SINGULAR",
                 active: true
             },
             {
                 key: "FIRST_PLURAL",
-                name: "1st plural",
-                hint: "nosotros",
+                name: "PERSON.FIRST_PLURAL",
+                hint: "PERSON_HINT.FIRST_PLURAL",
                 active: true
             },
             {
                 key: "SECOND_SINGULAR",
-                name: "2nd singular",
-                hint: "tú",
+                name: "PERSON.SECOND_SINGULAR",
+                hint: "PERSON_HINT.SECOND_SINGULAR",
                 active: true
             },
             {
                 key: "SECOND_PLURAL",
-                name: "2nd plural",
-                hint: "vosotros",
+                name: "PERSON.SECOND_PLURAL",
+                hint: "PERSON_HINT.SECOND_PLURAL",
                 active: true
             },
             {
                 key: "THIRD_SINGULAR",
-                name: "3rd singular",
-                hint: "él/ella",
+                name: "PERSON.THIRD_SINGULAR",
+                hint: "PERSON_HINT.THIRD_SINGULAR",
                 active: true
             },
             {
                 key: "THIRD_PLURAL",
-                name: "3rd plural",
-                hint: "ellos/ellas",
+                name: "PERSON.THIRD_PLURAL",
+                hint: "PERSON_HINT.THIRD_PLURAL",
                 active: true
             }
       ];
