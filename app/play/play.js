@@ -47,7 +47,7 @@ angular.module('jv.play', ['ngRoute'])
 
     $scope.onAction = function () {
         var action = configService.getAction();
-        switch (action.key) {
+        switch (action) {
         case 'NONE':
             $scope.result.show = !$scope.result.show;
             break;
