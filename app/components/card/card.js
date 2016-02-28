@@ -16,8 +16,7 @@ angular.module('jv.card', ['ngRoute'])
     };
 })
 
-.controller('CardCtrl', ['$scope', 'Config', function ($scope, configService) {
-
+.controller('CardCtrl', ['$scope', '$translate', 'Config', function ($scope, $translate, configService) {
     $scope.evaluateCardAction = function () {
         if (!$scope.result.show) {
             $scope.result.show = !$scope.result.show;
@@ -34,4 +33,26 @@ angular.module('jv.card', ['ngRoute'])
         }
         return result;
     }
+
+//    var translate = function (translationPrefix) {
+           //        console.log('using prefix ' + translationPrefix);
+           //        if (typeof $scope.result !== 'undefined') {
+           //            var key = translationPrefix + $scope.result.tense.key;
+           //            $translate(key).then(function (translatedKey) {
+           //                $scope.result.tense.translated = translatedKey;
+           //            });
+           //        }
+           //    };
+           //
+           //    var translateTense = function () {
+           //        translate('TENSE.');
+           //    };
+           //
+           //    var translatePerson = function () {
+           //        translate('PERSON.');
+           //    }
+           //
+           //    $scope.$watch(function (scope) {
+           //        return scope.result;
+           //    }, translateTense);
 }]);

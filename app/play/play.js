@@ -22,10 +22,11 @@ angular.module('jv.play', ['ngRoute'])
         $scope.verb = verbService.query();
         $scope.result = {
             show: false,
-            translation: false,
+            showTranslation: false,
             tense: randomTense($scope.config),
             person: randomPerson($scope.config)
         };
+        console.log('loaded result' + $scope.result);
     })
 
     $scope.nextVerb = function () {

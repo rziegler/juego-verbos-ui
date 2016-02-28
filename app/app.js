@@ -63,20 +63,20 @@ angular.module('myApp', [
                 THIRD_SINGULAR: 'he/she',
                 THIRD_PLURAL: 'they'
             },
-            //            TENSE: {
-            PRESENT: 'Present',
-            PRESENT_PERFECT: 'Present Perfect',
-            PRETERITE: 'Preterite',
-            FUTURE: 'Future',
-            IMPERFECT: 'Imperfect',
-            CONDITIONAL: 'Conditional',
-            FUTURE_PERFECT: 'Future Perfect',
-            PAST_PERFECT: 'Past Perfect',
-            PRETERITE_ARCHAIC: 'Preterite (Archaic)',
-            CONDITIONAL_PERFECT: 'Conditional Perfect',
-            GERUNDIO: 'Gerund',
-            PASTPARTICIPLE: 'Pastparticiple'
-                //            }
+            TENSE: {
+                PRESENT: 'present',
+                PRESENT_PERFECT: 'present perfect',
+                PRETERITE: 'preterite',
+                FUTURE: 'future',
+                IMPERFECT: 'imperfect',
+                CONDITIONAL: 'conditional',
+                FUTURE_PERFECT: 'future perfect',
+                PAST_PERFECT: 'past perfect',
+                PRETERITE_ARCHAIC: 'preterite (archaic)',
+                CONDITIONAL_PERFECT: 'conditional perfect',
+                GERUNDIO: 'gerund',
+                PASTPARTICIPLE: 'pastparticiple'
+            }
         })
         .translations('de', {
             PLAY: {
@@ -100,20 +100,20 @@ angular.module('myApp', [
                 THIRD_SINGULAR: 'er/sie',
                 THIRD_PLURAL: 'sie'
             },
-            //            TENSE: {
-            PRESENT: 'Präsens',
-            PRESENT_PERFECT: 'Perfekt',
-            PRETERITE: 'Präteritum',
-            FUTURE: 'Futur',
-            IMPERFECT: 'Imperfekt',
-            CONDITIONAL: 'Konditional',
-            FUTURE_PERFECT: '',
-            PAST_PERFECT: 'Präteritum Perfekt',
-            PRETERITE_ARCHAIC: '',
-            CONDITIONAL_PERFECT: '',
-            GERUNDIO: 'Gerundiv',
-            PASTPARTICIPLE: 'Pastpartizip'
-                //            }
+            TENSE: {
+                PRESENT: 'Präsens',
+                PRESENT_PERFECT: 'Perfekt',
+                PRETERITE: 'Präteritum',
+                FUTURE: 'Futur',
+                IMPERFECT: 'Imperfekt',
+                CONDITIONAL: 'Konditional',
+                //                FUTURE_PERFECT: '',
+                PAST_PERFECT: 'Präteritum Perfekt',
+                //                PRETERITE_ARCHAIC: '',
+                //                CONDITIONAL_PERFECT: '',
+                GERUNDIO: 'Gerundiv',
+                PASTPARTICIPLE: 'Pastpartizip'
+            }
         })
         .translations('es', {
             PLAY: {
@@ -137,20 +137,20 @@ angular.module('myApp', [
                 THIRD_SINGULAR: 'él/ella',
                 THIRD_PLURAL: 'ellos/ellas'
             },
-            //            TENSE: {
-            PRESENT: 'Presente',
-            PRESENT_PERFECT: 'Préterito perfecto',
-            PRETERITE: 'Pretérito Indefinido',
-            FUTURE: 'Futuro',
-            IMPERFECT: 'Pretérito Imperfecto',
-            CONDITIONAL: 'Condicional',
-            FUTURE_PERFECT: 'Futuro perfecto',
-            PAST_PERFECT: 'Pluscuamperfecto',
-            PRETERITE_ARCHAIC: 'Pretérito anterior',
-            CONDITIONAL_PERFECT: 'Condicional perfecto',
-            GERUNDIO: 'Gerundio',
-            PASTPARTICIPLE: 'Participio'
-                //            }
+            TENSE: {
+                PRESENT: 'presente',
+                PRESENT_PERFECT: 'préterito perfecto',
+                PRETERITE: 'pretérito Indefinido',
+                FUTURE: 'futuro',
+                IMPERFECT: 'pretérito imperfecto',
+                CONDITIONAL: 'condicional',
+                FUTURE_PERFECT: 'futuro perfecto',
+                PAST_PERFECT: 'pluscuamperfecto',
+                PRETERITE_ARCHAIC: 'pretérito anterior',
+                CONDITIONAL_PERFECT: 'condicional perfecto',
+                GERUNDIO: 'gerundio',
+                PASTPARTICIPLE: 'participio'
+            }
         });
 
     $translateProvider

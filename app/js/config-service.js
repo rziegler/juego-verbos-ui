@@ -22,39 +22,39 @@ configService.factory('Config', ['$resource', '$translate', 'envService',
 
         var persons = [
             {
-                key: "FIRST_SINGULAR",
-                name: "PERSON.FIRST_SINGULAR",
-                hint: "PERSON_HINT.FIRST_SINGULAR",
+                key: "PERSON.FIRST_SINGULAR",
+                name: "1st singular",
+                hint: "yo",
                 active: true
             },
             {
-                key: "FIRST_PLURAL",
-                name: "PERSON.FIRST_PLURAL",
-                hint: "PERSON_HINT.FIRST_PLURAL",
+                key: "PERSON.FIRST_PLURAL",
+                name: "1st plural",
+                hint: "nosotros",
                 active: true
             },
             {
-                key: "SECOND_SINGULAR",
-                name: "PERSON.SECOND_SINGULAR",
-                hint: "PERSON_HINT.SECOND_SINGULAR",
+                key: "PERSON.SECOND_SINGULAR",
+                name: "2nd singular",
+                hint: "tú",
                 active: true
             },
             {
-                key: "SECOND_PLURAL",
-                name: "PERSON.SECOND_PLURAL",
-                hint: "PERSON_HINT.SECOND_PLURAL",
+                key: "PERSON.SECOND_PLURAL",
+                name: "2nd plural",
+                hint: "vosotros",
                 active: true
             },
             {
-                key: "THIRD_SINGULAR",
-                name: "PERSON.THIRD_SINGULAR",
-                hint: "PERSON_HINT.THIRD_SINGULAR",
+                key: "PERSON.THIRD_SINGULAR",
+                name: "3rd singular",
+                hint: "él/ella",
                 active: true
             },
             {
-                key: "THIRD_PLURAL",
-                name: "PERSON.THIRD_PLURAL",
-                hint: "PERSON_HINT.THIRD_PLURAL",
+                key: "PERSON.THIRD_PLURAL",
+                name: "3rd plural",
+                hint: "ellos/ellas",
                 active: true
             }
       ];
