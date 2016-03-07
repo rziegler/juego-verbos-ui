@@ -1,4 +1,4 @@
-<label class="six columns">
+<label class="six columns" ng-show="$ctrl.visible == true">
     <input type="checkbox" ng-change="$ctrl.update($ctrl.value, $ctrl.active)" ng-model="$ctrl.active">
-    <span class="label-body">{{$ctrl.value | translate}}</span>
+    <span class="label-body">{{$ctrl.value | translate }}</span>
 </label>

@@ -10,6 +10,7 @@ angular.module('myApp', [
     'jv.play',
     'jv.home',
     'jv.config',
+    'jv.about',
     'jv.card',
     'myApp.version'
 ])
@@ -67,6 +68,7 @@ angular.module('myApp', [
                 PRESENT: 'present',
                 PRESENT_PERFECT: 'present perfect',
                 PRETERITE: 'preterite',
+                FUTURE_SIMPLE: 'future simple',
                 FUTURE: 'future',
                 IMPERFECT: 'imperfect',
                 CONDITIONAL: 'conditional',
@@ -105,6 +107,7 @@ angular.module('myApp', [
                 PRESENT_PERFECT: 'Perfekt',
                 PRETERITE: 'Präteritum',
                 FUTURE: 'Futur',
+                FUTURE_SIMPLE: 'Futur einfach',
                 IMPERFECT: 'Imperfekt',
                 CONDITIONAL: 'Konditional',
                 //                FUTURE_PERFECT: '',
@@ -142,6 +145,7 @@ angular.module('myApp', [
                 PRESENT_PERFECT: 'préterito perfecto',
                 PRETERITE: 'pretérito Indefinido',
                 FUTURE: 'futuro',
+                FUTURE_SIMPLE: 'futuro simple',
                 IMPERFECT: 'pretérito imperfecto',
                 CONDITIONAL: 'condicional',
                 FUTURE_PERFECT: 'futuro perfecto',

@@ -100,9 +100,9 @@ configService.factory('Config', ['$resource', '$translate', 'envService',
 
         var changeTenseActive = function (id) {
             tenses.forEach(function (element) {
-                if (element.name === id) {
+                if (element.key === id) {
                     element.active = !element.active;
-                    console.log('Change active flag for ' + element.name + '(' + element.active + ')');
+                    console.log('Change active flag for ' + element.key + '(' + element.active + ')');
                 }
             });
         };
@@ -123,9 +123,9 @@ configService.factory('Config', ['$resource', '$translate', 'envService',
 
         var changePersonActive = function (id) {
             persons.forEach(function (element) {
-                if (element.name === id) {
+                if (element.key === id) {
                     element.active = !element.active;
-                    console.log('Change active flag for ' + element.name + '(' + element.active + ')');
+                    console.log('Change active flag for ' + element.key + '(' + element.active + ')');
                 }
             });
         };

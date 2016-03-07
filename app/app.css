@@ -201,7 +201,17 @@ nav ul ul ul {
     font-style: normal;
     font-size: 6em;
     line-height: 1.6em;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+    /*    text-align: center;*/
+}
+
+.home-h2 {
+    font-family: "Amatic SC";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+    line-height: 0.8em;
+    margin-bottom: 2rem;
     /*    text-align: center;*/
 }
 
@@ -224,9 +234,17 @@ nav ul ul ul {
     z-index: 10;
     margin-top: 2.6rem;
     margin-right: 2.5rem;
-    margin-bottom: 30rem;
+    margin-bottom: 10rem;
+}
+
+.home-paragraph {
+    padding: 0em 1em;
 }
 
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.u-center {
+    text-align: center;
+}

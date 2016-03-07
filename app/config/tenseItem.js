@@ -14,12 +14,14 @@ function TenseItemCtrl($scope, $element, $attrs) {
     };
 }
 
-angular.module('jv.config').component('tenseItem', {
-    templateUrl: 'config/tenseItem.html',
-    controller: TenseItemCtrl,
-    bindings: {
-        value: '<',
-        active: '<',
-        onUpdate: '&'
-    }
-});
+angular.module('jv.config')
+    .component('tenseItem', {
+        templateUrl: 'config/tenseItem.html',
+        controller: TenseItemCtrl,
+        bindings: {
+            value: '<',
+            active: '<',
+            visible: '<',
+            onUpdate: '&'
+        }
+    });
